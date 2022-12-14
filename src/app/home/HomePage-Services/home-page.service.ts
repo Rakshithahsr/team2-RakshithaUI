@@ -27,9 +27,8 @@ export class HomePageService {
 
   PostNewSubscriber(emailID:string):Observable<boolean>{
   
-    console.log(emailID)
 
-    let tempVar = this.http.get<boolean>('https://backenedappservice-team2-rakshitha.azurewebsites.net/api/home/getProducts/api/customer/AddNewSubscriber?emailID='+emailID)
+    let tempVar = this.http.get<boolean>('https://backenedappservice-team2-rakshitha.azurewebsites.net/api/customer/AddNewSubscriber?emailID='+emailID)
     console.log(tempVar)
     return tempVar
   }
